@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Endpoints Demo</title>
+</head>
+
+<body>
+    <h1>Welcome to my WebPage</h1>
+    <p>Select an endpoint:</p>
+    <select id="endpointSelect">
+        <option value="endpoint1">Part 1 - Titanic ML Project Repository</option>
+        <option value="endpoint2">Part 2 - Kaggle Dataset</option>
+        <option value="endpoint3">Part 3 - Titanic Data Model Jupyter Notebook</option>
+        <option value="endpoint4">Part 4 - Tableau Data Visualization</option>
+
+    </select>
+    <button onclick="redirectToEndpoint()">Go</button>
+
+    <script>
+        function redirectToEndpoint() {
+            var selectElement = document.getElementById("endpointSelect");
+            var selectedValue = selectElement.value;
+            window.location.href = "/" + selectedValue;
+        }
+    </script>
+</body>
+
+</html>
