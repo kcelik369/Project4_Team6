@@ -24,39 +24,18 @@ Nick Nath / earthreveals
    - `ModelEvaluation.ipynb`
 
 ## Data Visualization
-Most passengers on the Titanic perished. Passengers were mostly adults and mostly male. The largest class aboard 
-was the third class.  
+Based on our Tableau visualization and data analysis, most passengers on the Titanic perished. Passengers were mostly adults and mostly male and the largest class aboard 
+was the third class. Women aboard the ship had significantly higher chances of survival. Even when considering boarding class distinctions, survival rates among first-class men were only 35%, whereas over 97% of first-class women survived. Interestingly, third-class women had a higher survival rate than first-class men.  
 
-Women aboard the ship had significantly higher chances of survival. Even 
-when considering boarding class distinctions, survival rates among first-class
-men were only 35%, whereas over 97% of first-class women survived. 
-Interestingly, third-class women had a higher survival rate than first-class 
-men.  
-
-Gender also played a crucial role in the survival of children on board. While 
-sadly only 21% of boys in the third class survived, 51% of girls in the same class 
-did. Despite boys faring worse than adult women, their survival rate was 
-double that of adult men.
-Class was a significant factor as well, with women in first and second-class 
-being around twice as likely to survive as men in first class, while still 
-unlikely to survive, were three times as likely to survive compared to men in 
-lower classes.  
- 
-Another way of looking at class is to observe the points of embarkation. 
-Cherbourg, France boarded the highest proportion of first-class passengers 
-and unsurprisingly saw the highest rates of survival. The passengers who 
-boarded at Queenstown, Ireland were mostly third class and consequently, 
-the rate of survival is lower than passengers who boarded at Cherbourg. 
-Passengers who boarded at Southampton, England were the least likely to 
-survive, mostly because Southampton had the highest proportion of male 
-passengers and also due to more than 50% of passengers coming from third 
-class.
-Having relatives aboard the Titanic indeed slightly improved the chances of 
-survival for all classes and genders of adults and children, except for first-
-class women, where the difference was negligible.  
-
+Gender also played a crucial role in the survival of children on board. While sadly only 21% of boys in the third class survived, 51% of girls in the same class did. Despite boys faring worse than adult women, their survival rate was double that of adult men. Having relatives aboard the Titanic slightly improved the chances of survival for all classes and genders of adults and children, except for first-class women, where the difference was negligible.  
+  
+Class was a significant factor as well, with women in first and second class being around twice as likely to survive as men in first class. While still having a low survival rate, men in first class were three times as likely to survive compared to men in lower classes.  
+  
+Another way of looking at class is to observe the points of embarkation. Cherbourg, France boarded the highest proportion of first-class passengers and unsurprisingly saw the highest rates of survival. The passengers who boarded at Queenstown, Ireland were mostly third class and consequently, the rate of survival was lower than passengers who boarded at Cherbourg. 
+Passengers who boarded at Southampton, England were the least likely to survive, mostly because Southampton had the highest proportion of male passengers and also due to more than 50% of passengers coming from third class.  
+  
 ## Data Model Implementation  
-Kerim**
+**Kerim**
 A Python script initializes, trains, and evaluates a model (10 points)  
 The data is cleaned, normalized, and standardized prior to modeling (5 points)  
 The full ETL process is contained within the "DataProcessing" Jupyter notbook, while model testing and analysis is in "ModelEvaluation". The "SQLCode" notebook contains more data transformation and analysis utilizing SQL.
@@ -64,7 +43,8 @@ All notebooks were run in Google Colab; as a result, there are segments of redun
 Our best performance was around 86% from the CatBoost model.  
 
 ## Data Model Optimization
-**The model demonstrates meaningful predictive power at least 75% classification accuracy or 0.80 R-squared. (5 points) - Tan**
+**The model demonstrates meaningful predictive power at least 75% classification accuracy or 0.80 R-squared. (5 points)**
+**Tan**
 Data Model Optimization (25 points)  
 The model optimization and evaluation process showing iterative changes made to the model and the resulting changes in model performance is documented in either a CSV/Excel table or in the Python script itself (15 points)  
 I have done two classifications and one neural network model.
@@ -94,7 +74,8 @@ number of trainable parameters in the model. It provides a concise overview of t
 model architecture.
 I then compile and fit the model to get an accuracy of 0.83
 
-**Overall model performance is printed or displayed at the end of the script (10 points) - Kylie**
+**Overall model performance is printed or displayed at the end of the script (10 points)**
+**Kylie**
 Summary of Model Performance
 Logistic Regression:
 The confusion matrix of the logistic regression model revealed that the model accurately classified 541 instances of non-survival and 302 instances of survival in the training data.
