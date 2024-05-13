@@ -43,7 +43,7 @@ All notebooks were run in Google Colab; as a result, there are segments of redun
 Our best performance was around 86% from the CatBoost model.  
 
 ## Data Model Optimization
-**The model demonstrates meaningful predictive power at least 75% classification accuracy or 0.80 R-squared. (5 points)**
+**The model demonstrates meaningful predictive power at least 75% classification accuracy or 0.80 R-squared. (5 points)**  
 **Tan**
 Data Model Optimization (25 points)  
 The model optimization and evaluation process showing iterative changes made to the model and the resulting changes in model performance is documented in either a CSV/Excel table or in the Python script itself (15 points)  
@@ -74,7 +74,7 @@ number of trainable parameters in the model. It provides a concise overview of t
 model architecture.
 I then compile and fit the model to get an accuracy of 0.83
 
-**Overall model performance is printed or displayed at the end of the script (10 points)**
+**Overall model performance is printed or displayed at the end of the script (10 points)**  
 **Kylie**
 Summary of Model Performance
 Logistic Regression:
