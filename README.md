@@ -41,7 +41,7 @@ See the full Tableau Visualization on [Tableau Public](https://public.tableau.co
 A Python script initializes, trains, and evaluates a model (10 points)  
 The data is cleaned, normalized, and standardized prior to modeling (5 points)  
 The full ETL process is contained within the "DataProcessing" Jupyter notbook, while model testing and analysis is in "ModelEvaluation". The "SQLCode" notebook contains more data transformation and analysis utilizing SQL.
-All notebooks were run in Google Colab; as a result, there are segments of redundant code present to make running the code as simple as possible without too many file uploads. You'll need to add the relevant files in a "Resources" folder in Colab, which can be found near the top of the Jupyter notebooks. Output files such as refined datasets and a tree diagram will need to be downloaded from Colab.
+All notebooks were run in [Google Colab](https://colab.research.google.com/); as a result, there are segments of redundant code present to make running the code as simple as possible without too many file uploads. You'll need to add the relevant files in a "Resources" folder in Colab, which can be found near the top of the Jupyter notebooks. Output files such as refined datasets and a tree diagram will need to be downloaded from Colab.
 Our best performance was around 86% from the CatBoost model.  
 
 ## Data Model Optimization
