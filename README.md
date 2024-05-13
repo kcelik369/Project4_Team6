@@ -37,7 +37,7 @@ Passengers who boarded at Southampton, England were the least likely to survive,
 See the full Tableau Visualization on [Tableau Public](https://public.tableau.com/app/profile/elizabeth.morgan4663/viz/Project4Team6-TitanicVisualizations/TitanicPassengerDataAnalysis) or download the `Titanic_Visualizations.twbx` found in this github repository.
   
 ## Data Model Implementation  
-**Kerim**
+**Kerim**  
 A Python script initializes, trains, and evaluates a model (10 points)  
 The data is cleaned, normalized, and standardized prior to modeling (5 points)  
 The full ETL process is contained within the "DataProcessing" Jupyter notbook, while model testing and analysis is in "ModelEvaluation". The "SQLCode" notebook contains more data transformation and analysis utilizing SQL.
@@ -46,7 +46,7 @@ Our best performance was around 86% from the CatBoost model.
 
 ## Data Model Optimization
 **The model demonstrates meaningful predictive power at least 75% classification accuracy or 0.80 R-squared. (5 points)**  
-**Tan**
+**Tan**  
 Data Model Optimization (25 points)  
 The model optimization and evaluation process showing iterative changes made to the model and the resulting changes in model performance is documented in either a CSV/Excel table or in the Python script itself (15 points)  
 I have done two classifications and one neural network model.
@@ -77,7 +77,7 @@ model architecture.
 I then compile and fit the model to get an accuracy of 0.83
 
 **Overall model performance is printed or displayed at the end of the script (10 points)**  
-**Kylie**
+**Kylie**  
 Summary of Model Performance
 Logistic Regression:
 The confusion matrix of the logistic regression model revealed that the model accurately classified 541 instances of non-survival and 302 instances of survival in the training data.
