@@ -1,5 +1,6 @@
-# Machine Learning Voyage: Predicting Survival on the Titanic
-## Collaborators
+# Machine Learning Voyage: Predicting Survival on the Titanic  
+## Collaborators  
+**Fullname / Github Username**  
 Kerim Celik / kcelik369  
 Nancy Zheng / zhengn95  
 Kylie Li / xyr3n  
@@ -7,9 +8,17 @@ Thanushree Palanivale / tanvale
 Elizabeth Morgan / elizabethmorgan26  
 Nick Nath / earthreveals  
 
-## Dataset
-The Resources folder contains the datasets used in this analysis  
-Original Kaggle Dataset is [HERE](https://www.kaggle.com/competitions/titanic)
+## Table of Contents 
+1. **Dataset**
+   - Resources folder
+   - Original Kaggle Dataset is [HERE](https://www.kaggle.com/competitions/titanic)  
+2. **Data Visualization**
+   - `Titanic_Visualizations.twbx`
+4. **Data Model Implementation**
+   - `DataProcessing.ipynb`
+   - `SQLCode.ipynb`
+5. **Data Model Optimization**
+   - `ModelEvaluation.ipynb`
 
 ## Outline - Tableau - Elizabeth
 We will attempt to use a variety of machine learning applications and network types to solve the classic problem of determining if a passenger on the Titanic survived or not.  
@@ -23,11 +32,11 @@ men were only 35%, whereas over 97% of first-class women survived.
 Interestingly, third-class women had a higher survival rate than first-class 
 men.
 Gender also played a crucial role in the survival of children on board. While 
-sadly only 21% of boys in third class survived, 51% of girls in the same class 
+sadly only 21% of boys in the third class survived, 51% of girls in the same class 
 did. Despite boys faring worse than adult women, their survival rate was 
 double that of adult men.
-Class was a significant factor as well, with women in first and second class 
-being around twice as likely to survive and men in first class, while still 
+Class was a significant factor as well, with women in first and second-class 
+being around twice as likely to survive as men in first class, while still 
 unlikely to survive, were three times as likely to survive compared to men in 
 lower classes.
  
@@ -51,7 +60,7 @@ The full ETL process is contained within the "DataProcessing" Jupyter notbook, w
 All notebooks were run in Google Colab; as a result, there are segments of redundant code present to make running the code as simple as possible without too many file uploads. You'll need to add the relevant files in a "Resources" folder in Colab, which can be found near the top of the Jupyter notebooks. Output files such as refined datasets and a tree diagram will need to be downloaded from Colab.
 Our best performance was around 86% from the CatBoost model.
 
-**The model utilizes data retrieved from SQL or Spark (5 points) - Nancy**
+**The model utilizes data retrieved from SQL (5 points) - Nancy**
 
 **The model demonstrates meaningful predictive power at least 75% classification accuracy or 0.80 R-squared. (5 points) - Tan**
 Data Model Optimization (25 points)  
