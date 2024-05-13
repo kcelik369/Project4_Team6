@@ -9,7 +9,7 @@ Nick Nath / earthreveals
 
 ## Dataset
 The Resources folder contains the datasets used in this analysis  
-Source is [HERE](https://www.kaggle.com/competitions/titanic)
+Original Kaggle Dataset is [HERE](https://www.kaggle.com/competitions/titanic)
 
 ## Outline - Tableau - Elizabeth
 We will attempt to use a variety of machine learning applications and network types to solve the classic problem of determining if a passenger on the Titanic survived or not.  
