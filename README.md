@@ -33,6 +33,8 @@ Class was a significant factor as well, with women in first and second class bei
   
 Another way of looking at class is to observe the points of embarkation. Cherbourg, France boarded the highest proportion of first-class passengers and unsurprisingly saw the highest rates of survival. The passengers who boarded at Queenstown, Ireland were mostly third class and consequently, the rate of survival was lower than passengers who boarded at Cherbourg. 
 Passengers who boarded at Southampton, England were the least likely to survive, mostly because Southampton had the highest proportion of male passengers and also due to more than 50% of passengers coming from third class.  
+
+See the full Tableau Visualization on [Tableau Public](https://public.tableau.com/app/profile/elizabeth.morgan4663/viz/Project4Team6-TitanicVisualizations/TitanicPassengerDataAnalysis) or download the `Titanic_Visualizations.twbx` found in this github repository.
   
 ## Data Model Implementation  
 **Kerim**
