@@ -1,6 +1,6 @@
 # Machine Learning Voyage: Predicting Survival on the Titanic  
 ## Outline 
-We will attempt to use a variety of machine learning applications and network types to solve the classic problem of determining if a passenger on the Titanic survived or not.  
+We will attempt to use a variety of machine learning applications and network types to solve the classic problem of determining if a passenger on the Titanic survived or not. Please follow this [link](https://docs.google.com/presentation/d/1BwgvJUFh5OM1lqclEAVu_NhSxfGTTEGm/edit?usp=drive_link&ouid=118052364722070729043&rtpof=true&sd=true) to view out project on PPT.
 
 ## Collaborators  
 **Fullname / Github Username**  
@@ -37,48 +37,12 @@ Passengers who boarded at Southampton, England were the least likely to survive,
 See the full Tableau Visualization on [Tableau Public](https://public.tableau.com/app/profile/elizabeth.morgan4663/viz/Project4Team6-TitanicVisualizations/TitanicPassengerDataAnalysis) or download the `Titanic_Visualizations.twbx` found in this github repository.
   
 ## Data Model Implementation  
-**Kerim**  
-A Python script initializes, trains, and evaluates a model (10 points)  
-The data is cleaned, normalized, and standardized prior to modeling (5 points)  
-The full ETL process is contained within the "DataProcessing" Jupyter notbook, while model testing and analysis is in "ModelEvaluation". The "SQLCode" notebook contains more data transformation and analysis utilizing SQL.
-All notebooks were run in [Google Colab](https://colab.research.google.com/); as a result, there are segments of redundant code present to make running the code as simple as possible without too many file uploads. You'll need to add the relevant files in a "Resources" folder in Colab, which can be found near the top of the Jupyter notebooks. Output files such as refined datasets and a tree diagram will need to be downloaded from Colab.
-Our best performance was around 86% from the CatBoost model.  
+The first step of the data processing stage was to merge the test CSV files and then assign the files to a train or test variable. Next null values were dropped from the "Embarked" column since there was no significant loss in the data by doing so. To ensure that data types were correct, the `.astype()` function was used to convert appropriate columns to strings. The "Age" column contains 177 null values out of 891 entries, therefore a significant amount of data would be lost if we dropped null values. Instead, estimated median values for "Age" were replaced across sets of "Pclass" and "Gender" feature combinations with null values...  
 
-## Data Model Optimization
-**The model demonstrates meaningful predictive power at least 75% classification accuracy or 0.80 R-squared. (5 points)**  
-**Tan**  
-Data Model Optimization (25 points)  
-The model optimization and evaluation process showing iterative changes made to the model and the resulting changes in model performance is documented in either a CSV/Excel table or in the Python script itself (15 points)  
-I have done two classifications and one neural network model.
-For the two classifications, I used the CatBoost and AdaBoost classifiers. CatBoost is 
-a gradient-boosting library that's particularly effective for categorical data. 
-AdaBoost is short for Adaptive Boosting and is a machine-learning algorithm used 
-for classification tasks. It is an ensemble learning method that combines multiple 
-weak learners to create a strong learner.
-CatBoost was initialized and iterations were set to 500. I also try to control the step
-size at each iteration during the gradient boosting process. I then train, predict, and 
-evaluate the model to get an accuracy of 0.86. This turns out to be our best-performing model.
-AdaBoost is later implemented using sci-kit learn as well.    I generate a synthetic 
-classification dataset that creates 1000 samples with 4 features, 2 of which are 
-informative for classification. I then train, predict, and evaluate the model to get an 
-accuracy of 0.84.
-Neural network model using TensorFlow's Keras API
-I set up input features, and layer sizes and created a new sequential neural network 
-model.
-I then add the first layer and set the activation to ReLu (Rectified Linear Unit), which
-is commonly used in hidden layers to introduce non-linearity. I then set the second, 
-third, and output layers and set all their activations to sigmoid. Sigmoid functions are 
-often used in hidden layers for binary classification problems. Sigmoid is also 
-chosen in the output layer because the problem is a binary classification, where the 
-output needs to be between 0 and 1.
-I print a summary of the model, including the layers, their output shapes, and the 
-number of trainable parameters in the model. It provides a concise overview of the 
-model architecture.
-I then compile and fit the model to get an accuracy of 0.83
+The full ETL process is contained within the `DataProcessing.ipynb`, while model testing and analysis is in `ModelEvaluation.ipynb`. The `SQLCode.ipynb` contains more data transformation and analysis utilizing SQL. All notebooks were run in [Google Colab](https://colab.research.google.com/); as a result, there are segments of redundant code present to make running the code as simple as possible without too many file uploads. You'll need to add the relevant files in a "Resources" folder in Colab, which can be found near the top of the Jupyter notebooks. Output files such as refined datasets and a tree diagram will need to be downloaded from Colab.
 
-**Overall model performance is printed or displayed at the end of the script (10 points)**  
-**Kylie**  
-Summary of Model Performance
+## Data Model Optimization  
+Summary of Model Performance in Supervised Machine Learning
 Logistic Regression:
 The confusion matrix of the logistic regression model revealed that the model accurately classified 541 instances of non-survival and 302 instances of survival in the training data.
 In the testing data, it correctly identified 193 instances of non-survival and 80 instances of survival.
@@ -102,8 +66,19 @@ With an 83% accuracy in testing, the model demonstrated a slightly stronger capa
 
 Overall, the models evaluated showed strong predictive capabilities in training data, where they demonstrated higher accuracy rates. However, they tend to perform better at predicting class 0 (non-survival) instances compared to class 1 (survival) instances across all models. This discrepancy could be attributed to several factors, including class imbalance, feature representation, and model complexity.
 
-Interestingly, both the random forest and decision tree classifiers achieved a remarkable 100% accuracy on the training data. This outcome suggests that these models may have overfit the training data. As a result, they may struggle to perform as well on unseen data, leading to lower accuracy rates in testing.
+Interestingly, both the random forest and decision tree classifiers achieved a remarkable 100% accuracy on the training data. This outcome suggests that these models may have overfit the training data. As a result, they may struggle to perform as well on unseen data, leading to lower accuracy rates in testing.  
 
+**Classification & Neural Network Model**
+Two classifications and one neural network model were used in Data Model Optimization. The `CatBoost` and `AdaBoost` classifiers were used. `CatBoost` is a gradient-boosting library that's particularly effective for categorical data. `AdaBoost` is short for Adaptive Boosting and is a machine-learning algorithm used for classification tasks. It is an ensemble learning method that combines multiple weak learners to create a strong learner.  
+  
+`CatBoost` was initialized and iterations were set to 500. Step size was controlled at each iteration during the gradient boosting process. We then train, predict, and 
+evaluate the model to get an accuracy of *0.86 or 85%. This turns out to be our best-performing model.*  
+  
+`AdaBoost` is later implemented using sci-kit learn as well. We generate a synthetic classification dataset that creates 1000 samples with 4 features, 2 of which are informative for classification. We then train, predict, and evaluate the model to get an accuracy of 0.84. 
+
+The neural network model using TensorFlow's Keras API was used. We set up input features, layer sizes and created a new sequential neural network model. We then added the first layer and set the activation to ReLu (Rectified Linear Unit), which is commonly used in hidden layers to introduce non-linearity. The second, third, and output layers activations were all set to sigmoid. Sigmoid functions are often used in hidden layers for binary classification problems. Sigmoid is also chosen in the output layer because the problem is a binary classification, where the output needs to be between 0 and 1.  
+  
+We print a summary of the model, including the layers, their output shapes, and the number of trainable parameters in the model. It provides a concise overview of the model architecture. We then compile and fit the model to get an accuracy of 0.83.
 
 **TO DO**
 GitHub repository is free of unnecessary files and folders and has an appropriate .gitignore in use (10 points)  
