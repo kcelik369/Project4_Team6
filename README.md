@@ -13,6 +13,36 @@ Original Kaggle Dataset is [HERE](https://www.kaggle.com/competitions/titanic)
 
 ## Outline - Tableau - Elizabeth
 We will attempt to use a variety of machine learning applications and network types to solve the classic problem of determining if a passenger on the Titanic survived or not.  
+Tableau Analysis for the ReadMe file:
+Most passengers on the Titanic perished.
+Passengers were mostly adults and mostly male. The largest class aboard 
+was third class.
+Women aboard the ship had significantly higher chances of survival. Even 
+when considering boarding class distinctions, survival rates among first-class
+men were only 35%, whereas over 97% of first-class women survived. 
+Interestingly, third-class women had a higher survival rate than first-class 
+men.
+Gender also played a crucial role in the survival of children on board. While 
+sadly only 21% of boys in third class survived, 51% of girls in the same class 
+did. Despite boys faring worse than adult women, their survival rate was 
+double that of adult men.
+Class was a significant factor as well, with women in first and second class 
+being around twice as likely to survive and men in first class, while still 
+unlikely to survive, were three times as likely to survive compared to men in 
+lower classes.
+ 
+Another way of looking at class is to observe the points of embarkation. 
+Cherbourg, France boarded the highest proportion of first-class passengers 
+and unsurprisingly saw the highest rates of survival. The passengers who 
+boarded at Queenstown, Ireland were mostly third class and consequently, 
+the rate of survival is lower than passengers who boarded at Cherbourg. 
+Passengers who boarded at Southampton, England were the least likely to 
+survive, mostly because Southampton had the highest proportion of male 
+passengers and also due to more than 50% of passengers coming from third 
+class.
+Having relatives aboard the Titanic indeed slightly improved the chances of 
+survival for all classes and genders of adults and children, except for first-
+class women, where the difference was negligible.
 
 **Data Model Implementation (25 points) - Kerim**
 A Python script initializes, trains, and evaluates a model (10 points)  
