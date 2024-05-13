@@ -17,12 +17,42 @@ We will attempt to use a variety of machine learning applications and network ty
 **Data Model Implementation (25 points) - Kerim**
 A Python script initializes, trains, and evaluates a model (10 points)  
 The data is cleaned, normalized, and standardized prior to modeling (5 points)  
+The full ETL process is contained within the "DataProcessing" Jupyter notbook, while model testing and analysis is in "ModelEvaluation". The "SQLCode" notebook contains more data transformation and analysis utilizing SQL.
+All notebooks were run in Google Colab; as a result, there are segments of redundant code present to make running the code as simple as possible without too many file uploads. You'll need to add the relevant files in a "Resources" folder in Colab, which can be found near the top of the Jupyter notebooks. Output files such as refined datasets and a tree diagram will need to be downloaded from Colab.
+Our best performance was around 86% from the CatBoost model.
 
 **The model utilizes data retrieved from SQL or Spark (5 points) - Nancy**
 
 **The model demonstrates meaningful predictive power at least 75% classification accuracy or 0.80 R-squared. (5 points) - Tan**
 Data Model Optimization (25 points)  
 The model optimization and evaluation process showing iterative changes made to the model and the resulting changes in model performance is documented in either a CSV/Excel table or in the Python script itself (15 points)  
+I have done two classifications and one neural network model.
+For the two classifications I used the CatBoost and AdaBoost classifiers. CatBoost is 
+a gradient boosting library that's particularly effective for categorical data. 
+AdaBoost is short for Adaptive Boosting, and is a machine learning algorithm used 
+for classification tasks. It is an ensemble learning method that combines multiple 
+weak learners to create a strong learner.
+CatBoost was initialized and iterations were set to 500. I also try to control the step
+size at each iteration during the gradient boosting process. I then train, predict and 
+evaluate the model to get an accuracy of 0.86. This turns out to be our best 
+performing model.
+AdaBoost is later implemented using sci-kit learn as well.    I generate a synthetic 
+classification dataset which creates 1000 samples with 4 features, 2 of which are 
+informative for classification. I then train, predict and evaluate the model to get an 
+accuracy of 0.84.
+Neural network model using TensorFlow's Keras API
+I set up input features, layer sizes and create a new sequential neural network 
+model.
+I then add the first layer and set the activation to ReLu (Rectified Linear Unit), which
+is commonly used in hidden layers to introduce non-linearity. I then set the second, 
+third and output layer and set all their activations to sigmoid. Sigmoid functions are 
+often used in hidden layers for binary classification problems. Sigmoid is also 
+chosen in the output layer because the problem is a binary classification, where the 
+output needs to be between 0 and 1.
+I print a summary of the model, including the layers, their output shapes, and the 
+number of trainable parameters in the model. It provides a concise overview of the 
+model architecture.
+I then compile and fit the model to get an accuracy of 0.83
 
 **Overall model performance is printed or displayed at the end of the script (10 points) - Kylie**
 Summary of Model Performance
