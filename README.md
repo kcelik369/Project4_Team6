@@ -83,6 +83,11 @@ evaluate the model to get an accuracy of *0.86 or 86%. This turns out to be our 
 `AdaBoost` is later implemented using sci-kit learn as well. We generate a synthetic classification dataset that creates 1000 samples with 4 features, 2 of which are informative for classification. We then train, predict, and evaluate the model to get an accuracy of 0.84. 
 
 The neural network model using `tensorflow`'s Keras API was used. We set up input features, layer sizes and created a new sequential neural network model. We then added the first layer and set the activation to ReLu (Rectified Linear Unit), which is commonly used in hidden layers to introduce non-linearity. The second, third, and output layers activations were all set to sigmoid. Sigmoid functions are often used in hidden layers for binary classification problems. Sigmoid is also chosen in the output layer because the problem is a binary classification, where the output needs to be between 0 and 1.  
+
+## Conclusion
+The Titanic disaster not only teaches us about the past but also serves as a crucial lesson in the importance of fairness and equality in safety and emergency protocols. This understanding is essential for devising strategies that enhance survival outcomes for everyone in future crises.
+
+![Titanic_end](https://github.com/zhengn95/Project4_Team6/blob/main/Images/Titanic_end.png)
   
 We print a summary of the model, including the layers, their output shapes, and the number of trainable parameters in the model. It provides a concise overview of the model architecture. We then compile and fit the model to get an accuracy of 0.83.
 
