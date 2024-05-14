@@ -1,4 +1,5 @@
 # Machine Learning Voyage: Predicting Survival on the Titanic  
+![Intro_Titanic](https://github.com/kcelik369/Project4_Team6/blob/main/Images/Intro_Titanic.png)
 ## Outline 
 We will attempt to use a variety of machine learning applications and network types to solve the classic problem of determining if a passenger on the Titanic survived or not. Please follow this [link](https://docs.google.com/presentation/d/1BwgvJUFh5OM1lqclEAVu_NhSxfGTTEGm/edit?usp=drive_link&ouid=118052364722070729043&rtpof=true&sd=true) to view out project on PPT.
 
@@ -23,7 +24,8 @@ Nick Nath / earthreveals
 5. **Data Model Optimization**
    - `ModelEvaluation.ipynb`
 
-## Data Visualization
+## Data Visualization  
+![Tableau](https://github.com/kcelik369/Project4_Team6/blob/main/Images/Tableau.png)  
 Based on our Tableau visualization and data analysis, most passengers on the Titanic perished. Passengers were mostly adults and mostly male and the largest class aboard 
 was the third class. Women aboard the ship had significantly higher chances of survival. Even when considering boarding class distinctions, survival rates among first-class men were only 35%, whereas over 97% of first-class women survived. Interestingly, third-class women had a higher survival rate than first-class men.  
 
@@ -45,6 +47,8 @@ The merged train and test dataset assigned the variable `full_set` was loaded in
   
 ## Data Model Optimization 
 ### Supervised Machine Learning using Models and Classifiers
+![Supervised ML](https://github.com/kcelik369/Project4_Team6/blob/main/Images/SupervisedLearning_Classifiers.png)  
+
 Using the `full_set` dataset created during Data Processing (ETL) we set our target (y) as the `Survived` column and our other columns to X. We then create a function to be used on each of our Models/Classifiers Performance. First, we fit the model and predict on our test and train data sets, then we scale and create dummy categorical columns for our test and train datasets.  See below for the summary of each model performance.
 
 **Logistic Regression:**  
@@ -67,7 +71,8 @@ Overall, the models evaluated showed strong predictive capabilities in training 
 
 Interestingly, both the random forest and decision tree classifiers achieved a remarkable 100% accuracy on the training data. This outcome suggests that these models may have overfit the training data. As a result, they may struggle to perform as well on unseen data, leading to lower accuracy rates in the testing.  
   
-### Classification & Neural Network Model
+### Classification & Neural Network Model  
+![Classification & NN Model](https://github.com/kcelik369/Project4_Team6/blob/main/Images/Classification.png)  
 Two classifications and one neural network model were used in Data Model Optimization. The `CatBoost` and `AdaBoost` classifiers were used. `CatBoost` is a gradient-boosting library that's particularly effective for categorical data. `AdaBoost` is short for Adaptive Boosting and is a machine-learning algorithm used for classification tasks. It is an ensemble learning method that combines multiple weak learners to create a strong learner.  
   
 `CatBoost` was initialized and iterations were set to 500. Step size was controlled at each iteration during the gradient boosting process. We then train, predict, and 
