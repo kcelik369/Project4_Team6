@@ -41,44 +41,42 @@ The first step of the data processing stage was to merge the test CSV files and 
 
 The full ETL process is contained within the `DataProcessing.ipynb`, while model testing and analysis is in `ModelEvaluation.ipynb`. The `SQLCode.ipynb` contains more data transformation and analysis utilizing SQL. All notebooks were run in [Google Colab](https://colab.research.google.com/); as a result, there are segments of redundant code present to make running the code as simple as possible without too many file uploads. You'll need to add the relevant files in a "Resources" folder in Colab, which can be found near the top of the Jupyter notebooks. Output files such as refined datasets and a tree diagram will need to be downloaded from Colab.
 
-## Data Model Optimization  
-Summary of Model Performance in Supervised Machine Learning
-Logistic Regression:
+The merged train and test dataset assigned the variable `full_set` was loaded into our SQLite database and used in Data Model Optimization.  
+  
+## Data Model Optimization 
+**Supervised Machine Learning using Models and Classifiers**  
+Using the `full_set` dataset created during Data Processing (ETL) we set our target (y) as the `Survived` column and our other columns to X. We then create a function to be used on each of our Models/Classifiers Performance. First, we fit the model and predict on our test and train data sets, then we scale and create dummy categorical columns for our test and train datasets.  See below for the summary of each model performance.
+
+**Logistic Regression:**  
 The confusion matrix of the logistic regression model revealed that the model accurately classified 541 instances of non-survival and 302 instances of survival in the training data.
-In the testing data, it correctly identified 193 instances of non-survival and 80 instances of survival.
-Achieving an 83% accuracy in testing, the logistic regression model demonstrated slightly better performance in predicting class 0 compared to class 1.
+In the testing data, it correctly identified 193 instances of non-survival and 80 instances of survival. Achieving an 83% accuracy in testing, the logistic regression model demonstrated slightly better performance in predicting class 0 compared to class 1.
 
-K Nearest Neighbors Classifier:
-The KNN classifier accurately predicted 218 instances of non-survival and 109 instances of survival in the testing data.
-Achieving an accuracy of 88% in training and 83% in testing, the K Nearest Neighbors Classifier Model showcased robust predictive capabilities.
+**K Nearest Neighbors Classifier:**  
+The KNN classifier accurately predicted 218 instances of non-survival and 109 instances of survival in the testing data. Achieving an accuracy of 88% in training and 83% in testing, the K Nearest Neighbors Classifier Model showcased robust predictive capabilities.  
 
-Random Forest Classifier:
-The random forest model accurately predicted all instances for both class 0 and class 1 in the training data. The testing data yielded a similar outcome, with correct predictions of 218 instances of non-survival and 109 instances of survival.
-It achieved an accuracy of 100% in training and 83% in testing, and the model exhibited consistent performance in predicting both non-survival and survival cases.
+**Random Forest Classifier:**  
+The random forest model accurately predicted all instances for both class 0 and class 1 in the training data. The testing data yielded a similar outcome, with correct predictions of 218 instances of non-survival and 109 instances of survival. It achieved an accuracy of 100% in training and 83% in testing, and the model exhibited consistent performance in predicting both non-survival and survival cases.
 
-Decision Tree Classifier:
-The decision tree classifier accurately predicted 184 instances of non-survival and 76 instances of survival. 
-While achieving 100% accuracy in the training data, its performance decreased slightly to 80% in testing.
+**Decision Tree Classifier:**  
+The decision tree classifier accurately predicted 184 instances of non-survival and 76 instances of survival. While achieving 100% accuracy in the training data, its performance decreased slightly to 80% in testing.
 
-Gradient Boosting Classifier Model:
-The gradient boosting classifier correctly identified 218 instances of non-survival and 109 instances of survival in the testing data.
-With an 83% accuracy in testing, the model demonstrated a slightly stronger capability towards predicting class 0 compared to class 1.
+**Gradient Boosting Classifier Model:**  
+The gradient boosting classifier correctly identified 218 instances of non-survival and 109 instances of survival in the testing data. With an 83% accuracy in testing, the model demonstrated a slightly stronger capability towards predicting class 0 compared to class 1.  
 
-Overall, the models evaluated showed strong predictive capabilities in training data, where they demonstrated higher accuracy rates. However, they tend to perform better at predicting class 0 (non-survival) instances compared to class 1 (survival) instances across all models. This discrepancy could be attributed to several factors, including class imbalance, feature representation, and model complexity.
+Overall, the models evaluated showed strong predictive capabilities in training data, where they demonstrated higher accuracy rates. However, they tend to perform better at predicting class 0 (non-survival) instances compared to class 1 (survival) instances across all models. This discrepancy could be attributed to several factors, including class imbalance, feature representation, and model complexity.  
 
-Interestingly, both the random forest and decision tree classifiers achieved a remarkable 100% accuracy on the training data. This outcome suggests that these models may have overfit the training data. As a result, they may struggle to perform as well on unseen data, leading to lower accuracy rates in testing.  
-
-**Classification & Neural Network Model**
+Interestingly, both the random forest and decision tree classifiers achieved a remarkable 100% accuracy on the training data. This outcome suggests that these models may have overfit the training data. As a result, they may struggle to perform as well on unseen data, leading to lower accuracy rates in the testing.  
+  
+**Classification & Neural Network Model**  
 Two classifications and one neural network model were used in Data Model Optimization. The `CatBoost` and `AdaBoost` classifiers were used. `CatBoost` is a gradient-boosting library that's particularly effective for categorical data. `AdaBoost` is short for Adaptive Boosting and is a machine-learning algorithm used for classification tasks. It is an ensemble learning method that combines multiple weak learners to create a strong learner.  
   
 `CatBoost` was initialized and iterations were set to 500. Step size was controlled at each iteration during the gradient boosting process. We then train, predict, and 
-evaluate the model to get an accuracy of *0.86 or 85%. This turns out to be our best-performing model.*  
+evaluate the model to get an accuracy of *0.86 or 86%. This turns out to be our best-performing model.*  
   
 `AdaBoost` is later implemented using sci-kit learn as well. We generate a synthetic classification dataset that creates 1000 samples with 4 features, 2 of which are informative for classification. We then train, predict, and evaluate the model to get an accuracy of 0.84. 
 
-The neural network model using TensorFlow's Keras API was used. We set up input features, layer sizes and created a new sequential neural network model. We then added the first layer and set the activation to ReLu (Rectified Linear Unit), which is commonly used in hidden layers to introduce non-linearity. The second, third, and output layers activations were all set to sigmoid. Sigmoid functions are often used in hidden layers for binary classification problems. Sigmoid is also chosen in the output layer because the problem is a binary classification, where the output needs to be between 0 and 1.  
+The neural network model using `tensorflow`'s Keras API was used. We set up input features, layer sizes and created a new sequential neural network model. We then added the first layer and set the activation to ReLu (Rectified Linear Unit), which is commonly used in hidden layers to introduce non-linearity. The second, third, and output layers activations were all set to sigmoid. Sigmoid functions are often used in hidden layers for binary classification problems. Sigmoid is also chosen in the output layer because the problem is a binary classification, where the output needs to be between 0 and 1.  
   
 We print a summary of the model, including the layers, their output shapes, and the number of trainable parameters in the model. It provides a concise overview of the model architecture. We then compile and fit the model to get an accuracy of 0.83.
 
-**TO DO**
-GitHub repository is free of unnecessary files and folders and has an appropriate .gitignore in use (10 points)  
+In summary, our best performance was around 86% from the CatBoost model.
