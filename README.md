@@ -79,4 +79,4 @@ The neural network model using `tensorflow`'s Keras API was used. We set up inpu
   
 We print a summary of the model, including the layers, their output shapes, and the number of trainable parameters in the model. It provides a concise overview of the model architecture. We then compile and fit the model to get an accuracy of 0.83.
 
-In summary, our best performance was around 86% from the CatBoost model.
+In summary, our best performance was around 86% from the `CatBoost` model.
