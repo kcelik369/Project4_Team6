@@ -44,7 +44,7 @@ The full ETL process is contained within the `DataProcessing.ipynb`, while model
 The merged train and test dataset assigned the variable `full_set` was loaded into our SQLite database and used in Data Model Optimization.  
   
 ## Data Model Optimization 
-**Supervised Machine Learning using Models and Classifiers**  
+### Supervised Machine Learning using Models and Classifiers
 Using the `full_set` dataset created during Data Processing (ETL) we set our target (y) as the `Survived` column and our other columns to X. We then create a function to be used on each of our Models/Classifiers Performance. First, we fit the model and predict on our test and train data sets, then we scale and create dummy categorical columns for our test and train datasets.  See below for the summary of each model performance.
 
 **Logistic Regression:**  
@@ -67,7 +67,7 @@ Overall, the models evaluated showed strong predictive capabilities in training 
 
 Interestingly, both the random forest and decision tree classifiers achieved a remarkable 100% accuracy on the training data. This outcome suggests that these models may have overfit the training data. As a result, they may struggle to perform as well on unseen data, leading to lower accuracy rates in the testing.  
   
-**Classification & Neural Network Model**  
+### Classification & Neural Network Model
 Two classifications and one neural network model were used in Data Model Optimization. The `CatBoost` and `AdaBoost` classifiers were used. `CatBoost` is a gradient-boosting library that's particularly effective for categorical data. `AdaBoost` is short for Adaptive Boosting and is a machine-learning algorithm used for classification tasks. It is an ensemble learning method that combines multiple weak learners to create a strong learner.  
   
 `CatBoost` was initialized and iterations were set to 500. Step size was controlled at each iteration during the gradient boosting process. We then train, predict, and 
