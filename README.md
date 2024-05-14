@@ -39,6 +39,8 @@ Passengers who boarded at Southampton, England were the least likely to survive,
 See the full Tableau Visualization on [Tableau Public](https://public.tableau.com/app/profile/elizabeth.morgan4663/viz/Project4Team6-TitanicVisualizations/TitanicPassengerDataAnalysis) or download the `Titanic_Visualizations.twbx` found in this github repository.
   
 ## Data Model Implementation  
+![SQL](https://github.com/kcelik369/Project4_Team6/blob/main/Images/SQL2.png)  
+  
 The first step of the data processing stage was to merge the test CSV files and then assign the files to a train or test variable. Next null values were dropped from the "Embarked" column since there was no significant loss in the data by doing so. To ensure that data types were correct, the `.astype()` function was used to convert appropriate columns to strings. The "Age" column contains 177 null values out of 891 entries, therefore a significant amount of data would be lost if we dropped null values. Instead, estimated median values for "Age" were replaced across sets of "Pclass" and "Gender" feature combinations with null values...  
 
 The full ETL process is contained within the `DataProcessing.ipynb`, while model testing and analysis is in `ModelEvaluation.ipynb`. The `SQLCode.ipynb` contains more data transformation and analysis utilizing SQL. All notebooks were run in [Google Colab](https://colab.research.google.com/); as a result, there are segments of redundant code present to make running the code as simple as possible without too many file uploads. You'll need to add the relevant files in a "Resources" folder in Colab, which can be found near the top of the Jupyter notebooks. Output files such as refined datasets and a tree diagram will need to be downloaded from Colab.
